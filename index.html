@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+
+
+  <script>
+    /*function inc() {
+      let a = 1;
+      function init() {
+        a++;
+        console.log(a);
+      }
+      init();
+    }
+
+
+    inc(); //1
+    inc(); //2
+    inc(); //3
+*/
+
+
+
+      window.addEventListener('load', function() {
+          if (navigator.cookieEnabled === false) {
+          alert("Cookies отключены!");
+          }
+          //console.log(navigator.cookieEnabled);
+
+          if (!document.cookie) {
+          var button = document.createElement("button");
+          const text = document.createTextNode( "Обновить куки" );
+	        button.appendChild( text );
+	        document.body.appendChild( button );
+          button.addEventListener('click', function() {
+          document.cookie = "name=Anton; max-age=10";
+          })
+        } else {
+          document.cookie = "name=Anton; max-age=10";
+        }
+
+          //setTimeout(function() {console.log(document.cookie)}, 9000)
+      })
+
+
+  </script>
+</body>
+
+</html>
